@@ -1,0 +1,39 @@
+<div class = "center jumbotron">
+<h1>Listing To Do Lists</h1>
+</div>
+ <div class = "container">
+ <%= will_paginate @todo_lists %>
+     
+<div class="number"><%= link_to 'New To Do List', new_todo_list_path %></div>
+ <table class = "table">
+
+
+
+  <h1>  
+
+
+  
+      <tr>
+      <th>List name</th>
+      <th>List due date</th>
+      <th colspan="3"></th>
+    </tr>
+  
+ 
+
+    <% @todo_lists.each do |todo_list| %>
+      <tr>
+        <td><%= todo_list.list_name %></td>
+        <td><%= todo_list.list_due_date %></td>
+        <td><%= link_to 'Show', todo_list %></td>
+        <td><%= link_to 'Edit', edit_todo_list_path(todo_list) %></td>
+       <td> <%= link_to 'Destroy', todo_list, method: :delete %></td>
+      </tr>
+    <% end %>
+
+</table>
+
+<%= will_paginate @todo_lists %>
+<br>
+
+</div>
