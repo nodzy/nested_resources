@@ -10,9 +10,11 @@ class SessionsController < ApplicationController
       if user && user.authenticate(password)
         session[:user_id] = user.id
         redirect_to root_path, notice: "Logged in successfully!"
+		
 
       else
         redirect_to login_path, alert: "Error!"
+	
       end
       end
 

@@ -1,11 +1,19 @@
-<% provide(:title, 'To Do Lists') %>
-<div class = "center jumbotron">
-<h1>Listing To Do Lists</h1>
-</div>
- <div class = "container">
- <%= will_paginate @todo_lists %>
+
+
+	<div class = "center jumbotron">
+	<h1>Listing To Do Lists</h1>
+	</div>
+	<div class = "container">
+
+	<% flash.each do |key, value| %>
+         <div class="flash-<%= key %>"><%= value %></div>
+      <% end %>
+	  <br>
+	  
+	<div class="number"><%= link_to 'New To Do List', new_todo_list_path %></div>
+	<%= will_paginate @todo_lists %>
      
-<div class="number"><%= link_to 'New To Do List', new_todo_list_path %></div>
+
  <table class = "table">
 
 

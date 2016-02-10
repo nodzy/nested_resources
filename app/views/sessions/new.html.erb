@@ -2,6 +2,11 @@
 <h1>Login </h1>
 </div>
 <div class = "container">
+
+<% flash.each do |key, value| %>
+         <div class="flash-<%= key %>"><%= value %></div>
+      <% end %>
+	  <br>
 <div class = "form_color">
 <%= form_for(:user, url: sessions_path) do |f| %>
 <div class="field">

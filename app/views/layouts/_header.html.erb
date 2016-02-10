@@ -1,0 +1,15 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+
+  <div class="container">
+  <ul class="nav navbar-nav navbar-right">
+   <div class="logged-in"> <% if logged_in? %>
+  <div style='float: right;'>
+    Logged in as <%= current_user.username %> |
+    <%= link_to "Logout", logout_path, method: :delete %> 
+	</div>
+  </div>
+<% end %>
+   
+  </div>
+
+</header></ul>

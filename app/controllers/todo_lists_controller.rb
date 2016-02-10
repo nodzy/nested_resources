@@ -66,9 +66,11 @@ class TodoListsController < ApplicationController
     def set_todo_list
       @todo_list = current_user.todo_lists.find(params[:id])
     end
+	
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def todo_list_params
       params.require(:todo_list).permit(:list_name, :list_due_date)
     end
+	
 end

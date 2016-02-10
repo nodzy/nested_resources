@@ -81,6 +81,44 @@ color: #006633;
 
 }
 
+.logged-in {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+ 
+  letter-spacing: 1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+  }
+  
+  .flash-notice
+  {
+  
+  font-size: 1.2em;
+  color: black;
+ 
+  letter-spacing: 1px;
+  
+  
+  }
+  
+    .flash-alert
+  {
+  
+  font-size: 1.2em;
+  color: red;
+ 
+  letter-spacing: 1px;
+  
+  
+  }
+
+
 
 
 
